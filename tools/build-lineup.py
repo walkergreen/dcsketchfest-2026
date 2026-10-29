@@ -36,7 +36,9 @@ YEARS = {
     "2026": {"dates": "March 25–28, 2026", "venue": "The DC Arts Center"},
     # 2025 dates come from the festival photo filenames (2025-03-26 … 03-29).
     "2025": {"dates": "March 26–29, 2025", "venue": "The DC Arts Center"},
-    "2024": {"dates": "", "venue": "Washington, DC"},
+    # 2024 ran at two rooms, unlike every year since.
+    "2024": {"dates": "March 20–23, 2024",
+             "venue": "The DC Improv and The DC Arts Center"},
 }
 
 PAGE = """<!DOCTYPE html>
@@ -44,6 +46,7 @@ PAGE = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>{year} Lineup - DC Sketchfest</title>
 <meta name="description" content="The {count} sketch comedy teams who performed at DC Sketchfest {year}.">
 
@@ -145,6 +148,7 @@ PAGE = """<!DOCTYPE html>
 </footer>
 
 <script src="/assets/js/main.js" defer></script>
+<div style="position:fixed;bottom:1rem;left:1rem;z-index:999;background:#211509;color:#f6ede4;border:2px solid #f4d35e;border-radius:10px;padding:.4rem .7rem;font-family:Inter,system-ui,sans-serif;font-size:.8rem;">2026 site archive &middot; <a href="https://dcsketchfest.com" style="color:#f4d35e;">current site</a></div>
 </body>
 </html>
 """
